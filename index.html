@@ -859,6 +859,82 @@
             alert('Thank you! Your message has been sent successfully. We will contact you soon.');
             this.reset();
         });
+
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // WhatsApp Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            // const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // Format WhatsApp message
+            let whatsappMessage = `Hello GAON Team,%0A%0A`;
+            whatsappMessage += `I would like to inquire about your services.%0A%0A`;
+            whatsappMessage += `*Name:* ${name}%0A`;
+            whatsappMessage += `*Email:* ${email}%0A`;
+            if (phone) {
+                whatsappMessage += `*Phone:* ${phone}%0A`;
+            }
+            // whatsappMessage += `*Service Interest:* ${service}%0A`;
+            whatsappMessage += `*Message:* ${message}%0A%0A`;
+            whatsappMessage += `Looking forward to your response.`;
+            
+            // WhatsApp phone number (Australia format)
+            const whatsappNumber = '6285176962127'; // +61 7 2111 8191 without spaces and +
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+            
+            // Open WhatsApp in new tab
+            window.open(whatsappURL, '_blank');
+            
+            // Show confirmation message
+            alert('Thank you! You will be redirected to WhatsApp to send your message.');
+            
+            // Optional: Reset form after submission
+            this.reset();
+        });
+
+        // Optional: Add click-to-chat WhatsApp button
+        function openWhatsApp() {
+            const defaultMessage = "Hello GAON Team, I'm interested in your services. Could you please provide more information?";
+            const whatsappURL = `https://wa.me/61721118191?text=${encodeURIComponent(defaultMessage)}`;
+            window.open(whatsappURL, '_blank');
+        }
     </script>
 </body>
 </html>
