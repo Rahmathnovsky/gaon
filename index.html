@@ -290,7 +290,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 30px;
             margin-top: 30px;
         }
         
@@ -462,8 +462,45 @@
                 flex-direction: column;
             }
         }
+
+            /* Tambahan styling untuk form WhatsApp */
+            .whatsapp-note {
+                background-color: #e8f5e8;
+                border-left: 4px solid #25D366;
+                padding: 10px 15px;
+                margin-bottom: 20px;
+                border-radius: 4px;
+                font-size: 0.9rem;
+            }
+
+            .whatsapp-note i {
+                color: #25D366;
+                margin-right: 8px;
+            }
+
+        @media (max-width: 768px) {
+            /* ... CSS responsive lainnya tetap sama ... */
+            
+            .whatsapp-note {
+                font-size: 0.85rem;
+                padding: 8px 12px;
+            }
+        }
         
         @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 20px;
+            }
+            
+            .logo {
+                margin-left: 10px;
+            }
+            
+            .mobile-toggle {
+                display: block;
+                margin-right: 10px;
+            }
+            
             .nav-menu {
                 position: fixed;
                 top: 80px;
@@ -484,10 +521,6 @@
             
             .nav-menu li {
                 margin: 15px 0;
-            }
-            
-            .mobile-toggle {
-                display: block;
             }
             
             .hero h1 {
@@ -690,11 +723,11 @@
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <i class="fas fa-globe"></i>
+                                <i class="fab fa-whatsapp"></i>
                             </div>
                             <div>
-                                <h4>Website</h4>
-                                <p>www.gaon.com.au</p>
+                                <h4>WhatsApp</h4>
+                                <p>+61 7 2111 8191</p>
                             </div>
                         </div>
                     </div>
@@ -706,20 +739,35 @@
                     </div>
                 </div>
                 <div class="contact-form">
+                    <div class="whatsapp-note">
+                        <i class="fab fa-whatsapp"></i>
+                        <strong>Send via WhatsApp</strong> - Your message will be sent directly to our WhatsApp Business account for faster response.
+                    </div>
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Full Name" required>
+                            <input type="text" class="form-control" id="name" placeholder="Full Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email Address" required>
+                            <input type="email" class="form-control" id="email" placeholder="Email Address" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject" required>
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number (optional)">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Message" required></textarea>
+                            <select class="form-control" id="service" required>
+                                <option value="" disabled selected>Select Service Interest</option>
+                                <option value="Recruitment">Star Recruitment Service</option>
+                                <option value="Golf">Brand Activation - Golf Equipment</option>
+                                <option value="Beauty">Beauty Products & Services</option>
+                                <option value="Other">Other Inquiry</option>
+                            </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                        </button>
                     </form>
                 </div>
             </div>
@@ -814,4 +862,3 @@
     </script>
 </body>
 </html>
-
