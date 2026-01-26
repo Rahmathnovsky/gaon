@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,36 +17,36 @@
             --gray: #6c757d;
             --transition: all 0.3s ease;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             line-height: 1.6;
             color: var(--dark);
             background-color: #fff;
         }
-        
+
         a {
             text-decoration: none;
             color: inherit;
         }
-        
+
         ul {
             list-style: none;
         }
-        
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 10px 25px;
@@ -54,38 +55,38 @@
             transition: var(--transition);
             cursor: pointer;
         }
-        
+
         .btn-primary {
             background-color: var(--primary);
             color: white;
             border: 2px solid var(--primary);
         }
-        
+
         .btn-primary:hover {
             background-color: var(--secondary);
             border-color: var(--secondary);
         }
-        
+
         .btn-outline {
             background-color: transparent;
             color: #ffffff;
             border: 2px solid #ffffff;
         }
-        
+
         .btn-outline:hover {
             background-color: var(--primary);
             color: white;
         }
-        
+
         .section {
             padding: 80px 0;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 50px;
         }
-        
+
         .section-title h2 {
             font-size: 2.2rem;
             color: var(--primary);
@@ -93,7 +94,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .section-title h2::after {
             content: '';
             position: absolute;
@@ -104,13 +105,13 @@
             height: 3px;
             background-color: var(--accent);
         }
-        
+
         .section-title p {
             color: var(--gray);
             max-width: 700px;
             margin: 0 auto;
         }
-        
+
         /* Header */
         header {
             background-color: white;
@@ -120,43 +121,43 @@
             top: 0;
             z-index: 1000;
         }
-        
+
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 0;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
         }
-        
+
         .logo-text {
             font-weight: 700;
             font-size: 1.5rem;
             color: var(--primary);
         }
-        
+
         .nav-menu {
             display: flex;
         }
-        
+
         .nav-menu li {
             margin-left: 25px;
         }
-        
+
         .nav-menu a {
             font-weight: 600;
             transition: var(--transition);
             position: relative;
         }
-        
+
         .nav-menu a:hover {
             color: var(--primary);
         }
-        
+
         .nav-menu a::after {
             content: '';
             position: absolute;
@@ -167,17 +168,17 @@
             background-color: var(--primary);
             transition: var(--transition);
         }
-        
+
         .nav-menu a:hover::after {
             width: 100%;
         }
-        
+
         .mobile-toggle {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
         }
-        
+
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/hero-1.png');
@@ -187,33 +188,33 @@
             padding: 180px 0 100px;
             text-align: center;
         }
-        
+
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
             line-height: 1.2;
         }
-        
+
         .hero p {
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 30px;
         }
-        
+
         .hero-buttons {
             display: flex;
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
         }
-        
+
         /* Layanan Section */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        
+
         .service-card {
             background-color: white;
             border-radius: 8px;
@@ -221,12 +222,12 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
-        
+
         .service-icon {
             background-color: var(--primary);
             color: white;
@@ -236,54 +237,54 @@
             justify-content: center;
             font-size: 2.5rem;
         }
-        
+
         .service-content {
             padding: 25px;
         }
-        
+
         .service-content h3 {
             margin-bottom: 15px;
             color: var(--primary);
         }
-        
+
         /* Tentang Section */
         .about {
             background-color: var(--light);
         }
-        
+
         .about-content {
             display: flex;
             align-items: center;
             gap: 50px;
         }
-        
+
         .about-text {
             flex: 1;
         }
-        
+
         .about-text h2 {
             color: var(--primary);
             margin-bottom: 20px;
             font-size: 2rem;
         }
-        
+
         .about-text p {
             margin-bottom: 20px;
         }
-        
+
         .about-image {
             flex: 1;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .about-image img {
             width: 100%;
             height: auto;
             display: block;
         }
-        
+
         /* Klien Section */
         .clients-slider {
             display: flex;
@@ -293,48 +294,48 @@
             gap: 30px;
             margin-top: 30px;
         }
-        
+
         .client-logo {
             height: 60px;
             filter: grayscale(100%);
             opacity: 0.7;
             transition: var(--transition);
         }
-        
+
         .client-logo:hover {
             filter: grayscale(0);
             opacity: 1;
         }
-        
+
         /* Kontak Section */
         .contact {
             background-color: var(--light);
         }
-        
+
         .contact-container {
             display: flex;
             gap: 50px;
         }
-        
+
         .contact-info {
             flex: 1;
         }
-        
+
         .contact-info h3 {
             margin-bottom: 20px;
             color: var(--primary);
         }
-        
+
         .contact-details {
             margin-bottom: 30px;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: flex-start;
             margin-bottom: 15px;
         }
-        
+
         .contact-icon {
             background-color: var(--primary);
             color: white;
@@ -347,15 +348,15 @@
             margin-right: 15px;
             flex-shrink: 0;
         }
-        
+
         .contact-form {
             flex: 1;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         .form-control {
             width: 100%;
             padding: 12px 15px;
@@ -364,32 +365,32 @@
             font-size: 1rem;
             transition: var(--transition);
         }
-        
+
         .form-control:focus {
             border-color: var(--primary);
             outline: none;
             box-shadow: 0 0 0 3px rgba(26, 58, 108, 0.2);
         }
-        
+
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
         }
-        
+
         /* Footer */
         footer {
             background-color: var(--dark);
             color: white;
             padding: 60px 0 20px;
         }
-        
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
         }
-        
+
         .footer-column h3 {
             margin-bottom: 20px;
             color: white;
@@ -397,7 +398,7 @@
             position: relative;
             padding-bottom: 10px;
         }
-        
+
         .footer-column h3::after {
             content: '';
             position: absolute;
@@ -407,27 +408,27 @@
             height: 2px;
             background-color: var(--accent);
         }
-        
+
         .footer-links li {
             margin-bottom: 10px;
         }
-        
+
         .footer-links a {
             transition: var(--transition);
             color: #bbb;
         }
-        
+
         .footer-links a:hover {
             color: white;
             padding-left: 5px;
         }
-        
+
         .social-links {
             display: flex;
             gap: 15px;
             margin-top: 20px;
         }
-        
+
         .social-link {
             display: flex;
             align-items: center;
@@ -438,12 +439,12 @@
             border-radius: 50%;
             transition: var(--transition);
         }
-        
+
         .social-link:hover {
             background-color: var(--primary);
             transform: translateY(-5px);
         }
-        
+
         .copyright {
             text-align: center;
             padding-top: 20px;
@@ -451,56 +452,56 @@
             color: #bbb;
             font-size: 0.9rem;
         }
-        
+
         /* Responsive */
         @media (max-width: 992px) {
             .about-content {
                 flex-direction: column;
             }
-            
+
             .contact-container {
                 flex-direction: column;
             }
         }
 
-            /* Tambahan styling untuk form WhatsApp */
-            .whatsapp-note {
-                background-color: #e8f5e8;
-                border-left: 4px solid #25D366;
-                padding: 10px 15px;
-                margin-bottom: 20px;
-                border-radius: 4px;
-                font-size: 0.9rem;
-            }
+        /* Tambahan styling untuk form WhatsApp */
+        .whatsapp-note {
+            background-color: #e8f5e8;
+            border-left: 4px solid #25D366;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
 
-            .whatsapp-note i {
-                color: #25D366;
-                margin-right: 8px;
-            }
+        .whatsapp-note i {
+            color: #25D366;
+            margin-right: 8px;
+        }
 
         @media (max-width: 768px) {
             /* ... CSS responsive lainnya tetap sama ... */
-            
+
             .whatsapp-note {
                 font-size: 0.85rem;
                 padding: 8px 12px;
             }
         }
-        
+
         @media (max-width: 768px) {
             .header-container {
                 padding: 15px 20px;
             }
-            
+
             .logo {
                 margin-left: 10px;
             }
-            
+
             .mobile-toggle {
                 display: block;
                 margin-right: 10px;
             }
-            
+
             .nav-menu {
                 position: fixed;
                 top: 80px;
@@ -514,36 +515,37 @@
                 padding-top: 50px;
                 transition: var(--transition);
             }
-            
+
             .nav-menu.active {
                 left: 0;
             }
-            
+
             .nav-menu li {
                 margin: 15px 0;
             }
-            
+
             .hero h1 {
                 font-size: 2.2rem;
             }
-            
+
             .hero p {
                 font-size: 1rem;
             }
-            
+
             .section {
                 padding: 60px 0;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <!-- <div class="logo-text">GAON</div> -->
-                 <img src="assets/logos/logo-gaon.png" alt="" style="width: 100px;">
+                <img src="assets/logos/logo-gaon.png" alt="" style="width: 100px;">
             </div>
             <div class="mobile-toggle">
                 <i class="fas fa-bars"></i>
@@ -562,7 +564,8 @@
     <section class="hero" id="home">
         <div class="container">
             <h1>Leading Trend Across All Brands</h1>
-            <p>GAON is the meaning of being correct, honest, and a standard in Korean. We provide branded products and services of superior quality and the most competitive prices.</p>
+            <p>GAON is the meaning of being correct, honest, and a standard in Korean. We provide branded products and
+                services of superior quality and the most competitive prices.</p>
             <div class="hero-buttons">
                 <a href="#services" class="btn btn-primary">Our Brands</a>
                 <a href="#contact" class="btn btn-outline">Contact Us</a>
@@ -584,7 +587,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Star Recruitment Service</h3>
-                        <p>A professional workforce supplier licensed by the Queensland Government. We supply labor to all industries with annual sales exceeding $30M by 2024.</p>
+                        <p>A professional workforce supplier licensed by the Queensland Government. We supply labor to
+                            all industries with annual sales exceeding $30M by 2024.</p>
                     </div>
                 </div>
                 <div class="service-card">
@@ -593,7 +597,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Brand Activation</h3>
-                        <p>Developing affordable and accessible golf equipment with trendy designs and good performance. Our "SUPER DISTANCE" golf balls are supplied to major Australian golf clubs.</p>
+                        <p>Developing affordable and accessible golf equipment with trendy designs and good performance.
+                            Our "SUPER DISTANCE" golf balls are supplied to major Australian golf clubs.</p>
                     </div>
                 </div>
                 <div class="service-card">
@@ -602,7 +607,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Beauty Products & Services</h3>
-                        <p>Operating BLOOM TOTAL SALON and manufacturing our own hair products to promote K-BEAUTY throughout Australia.</p>
+                        <p>Operating BLOOM TOTAL SALON and manufacturing our own hair products to promote K-BEAUTY
+                            throughout Australia.</p>
                     </div>
                 </div>
             </div>
@@ -615,9 +621,13 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>ABOUT GAON</h2>
-                    <p>GAON is a diversified company operating as an Australian Labor Hire Provider, Golf Equipment Producer, and K-Beauty Products & Services provider.</p>
-                    <p>Based on 'the GAON sincerity', we are a leading trend in Australia across all brands we own. Our commitment is to provide branded products and services of superior quality at the most competitive prices.</p>
-                    <p>We have received recognition for our contributions, including the Minister of Foreign Affairs Award in 2015 for our significant role in the K-MOVE project connecting Korea and Australia.</p>
+                    <p>GAON is a diversified company operating as an Australian Labor Hire Provider, Golf Equipment
+                        Producer, and K-Beauty Products & Services provider.</p>
+                    <p>Based on 'the GAON sincerity', we are a leading trend in Australia across all brands we own. Our
+                        commitment is to provide branded products and services of superior quality at the most
+                        competitive prices.</p>
+                    <p>We have received recognition for our contributions, including the Minister of Foreign Affairs
+                        Award in 2015 for our significant role in the K-MOVE project connecting Korea and Australia.</p>
                     <a href="#contact" class="btn btn-primary">Contact Us</a>
                 </div>
                 <div class="about-image">
@@ -638,8 +648,13 @@
                 <div class="client-logo"> <img src="assets/clients/garudafood.png" alt="" style="width: 50%;"> </div>
                 <div class="client-logo"> <img src="assets/clients/greenfields.png" alt="" style="width: 50%;"> </div>
                 <div class="client-logo"> <img src="assets/clients/kapal-api.png" alt="" style="width: 50%;"> </div>
-                <div class="client-logo"> <img src="assets/clients/sty-foundation.png" alt="" style="width: 50%;"> </div>
+                <div class="client-logo"> <img src="assets/clients/sty-foundation.png" alt="" style="width: 50%;">
+                </div>
                 <div class="client-logo"> <img src="assets/clients/padimas.png" alt="" style="width: 50%;"> </div>
+                <div class="client-logo"> <img src="assets/clients/green-tee.jpeg" alt="" style="width: 50%;"> </div>
+                <div class="client-logo"> <img src="assets/clients/leonian.jpeg" alt="" style="width: 50%;"> </div>
+                <div class="client-logo"> <img src="assets/clients/lotus-lakes.jpeg" alt="" style="width: 50%;"> </div>
+                <div class="client-logo"> <img src="assets/clients/minima.jpeg" alt="" style="width: 50%;"> </div>
             </div>
         </div>
     </section>
@@ -658,7 +673,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Star Recruitment Service Labor Hire Provider</h3>
-                        <p>Produced Australian Working Holiday Safety YouTube Video in collaboration with Sam Hammington, Korea Broadcaster.</p>
+                        <p>Produced Australian Working Holiday Safety YouTube Video in collaboration with Sam
+                            Hammington, Korea Broadcaster.</p>
                     </div>
                 </div>
                 <div class="service-card">
@@ -667,7 +683,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Sydney Korea Job Fair</h3>
-                        <p>Hosted in collaboration with the Consulate General of the Republic of Korea from 2013 to 2015, connecting Korean businesses with Australian opportunities.</p>
+                        <p>Hosted in collaboration with the Consulate General of the Republic of Korea from 2013 to
+                            2015, connecting Korean businesses with Australian opportunities.</p>
                     </div>
                 </div>
                 <div class="service-card">
@@ -676,7 +693,8 @@
                     </div>
                     <div class="service-content">
                         <h3>fieldit Everything in the field</h3>
-                        <p>Develop golf equipment that is to develop golf equipment that is affordable and easly accessible.</p>
+                        <p>Develop golf equipment that is to develop golf equipment that is affordable and easly
+                            accessible.</p>
                     </div>
                 </div>
             </div>
@@ -741,7 +759,8 @@
                 <div class="contact-form">
                     <div class="whatsapp-note">
                         <i class="fab fa-whatsapp"></i>
-                        <strong>Send via WhatsApp</strong> - Your message will be sent directly to our WhatsApp Business account for faster response.
+                        <strong>Send via WhatsApp</strong> - Your message will be sent directly to our WhatsApp Business
+                        account for faster response.
                     </div>
                     <form id="contactForm">
                         <div class="form-group">
@@ -780,7 +799,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Gaon</h3>
-                    <p>Leading trend across all brands based on 'the GAON sincerity'. Providing superior quality products and services at competitive prices.</p>
+                    <p>Leading trend across all brands based on 'the GAON sincerity'. Providing superior quality
+                        products and services at competitive prices.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
@@ -824,27 +844,27 @@
 
     <script>
         // Mobile Menu Toggle
-        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+        document.querySelector('.mobile-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
-        
+
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 document.querySelector('.nav-menu').classList.remove('active');
             });
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
+                if (targetId === '#') return;
+
                 const targetElement = document.querySelector(targetId);
-                if(targetElement) {
+                if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
@@ -852,36 +872,36 @@
                 }
             });
         });
-        
+
         // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
             alert('Thank you! Your message has been sent successfully. We will contact you soon.');
             this.reset();
         });
 
         // Mobile Menu Toggle
-        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+        document.querySelector('.mobile-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
-        
+
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 document.querySelector('.nav-menu').classList.remove('active');
             });
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
+                if (targetId === '#') return;
+
                 const targetElement = document.querySelector(targetId);
-                if(targetElement) {
+                if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
@@ -889,18 +909,18 @@
                 }
             });
         });
-        
+
         // WhatsApp Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             // const service = document.getElementById('service').value;
             const message = document.getElementById('message').value;
-            
+
             // Format WhatsApp message
             let whatsappMessage = `Hello GAON Team,%0A%0A`;
             whatsappMessage += `I would like to inquire about your services.%0A%0A`;
@@ -912,19 +932,19 @@
             // whatsappMessage += `*Service Interest:* ${service}%0A`;
             whatsappMessage += `*Message:* ${message}%0A%0A`;
             whatsappMessage += `Looking forward to your response.`;
-            
+
             // WhatsApp phone number (Australia format)
             const whatsappNumber = '6285176962127'; // +61 7 2111 8191 without spaces and +
-            
+
             // Create WhatsApp URL
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-            
+
             // Open WhatsApp in new tab
             window.open(whatsappURL, '_blank');
-            
+
             // Show confirmation message
             alert('Thank you! You will be redirected to WhatsApp to send your message.');
-            
+
             // Optional: Reset form after submission
             this.reset();
         });
@@ -937,4 +957,5 @@
         }
     </script>
 </body>
+
 </html>
